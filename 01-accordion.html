@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Accordion Componenet</title>
+    <style>
+      /* main color #087f5b
+      grey color #495057*/
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: #495057;
+        line-height: 1;
+        /* border-bottom: 10px solid #087f5b; */
+      }
+      .accordion {
+        width: 70%;
+        margin: 100px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+      .item {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 24px;
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        column-gap: 24px;
+        row-gap: 32px;
+        align-items: center;
+        margin: 32px 100px;
+      }
+      .number,
+      .text {
+        font-size: 24px;
+        font-weight: 500;
+        /* color: #087f5b; */
+      }
+      .number {
+        color: #e9ecef;
+      }
+      .text {
+      }
+      .icon {
+        width: 24px;
+        height: 24px;
+        fill: #087f5b;
+        /* stroke: #087f5b; */
+      }
+
+      .hidden-box {
+        grid-column: 2;
+        display: none;
+      }
+      .hidden-box p {
+        line-height: 1.6;
+        margin-bottom: 24px;
+        color: rgb(51, 51, 51);
+      }
+
+      .hidden-box ul {
+        color: #868e96;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      /* OPEN STATE */
+      .open {
+        border-top: 4px solid #087f5b;
+      }
+      .open .hidden-box {
+        display: block;
+      }
+      .open .number,
+      .open .text {
+        color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="acccordion">
+      <div class="item">
+        <p class="number">01</p>
+        <p class="text">Where are these chairs assembled?</p>
+        <!-- <i class="icon"></i> -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="1con"
+          style="fill: #087f5b; transform: ; msfilter: "
+        >
+          <path
+            d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
+          ></path>
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nihil placeat, alias accusamus adipisci molestiae, laboriosam ipsam
+            consequatur doloribus esse explicabo, corrupti voluptatem rem
+            incidunt vel voluptate. Aliquam, natus veniam?
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Neque temporibus officiis dolorum non vel doloremque.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Quod odio magni molestias nemo ullam. Est minima fugiat.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- </div>
+    <div class="acccordion"> -->
+      <div class="item open">
+        <p class="number">02</p>
+        <p class="text">How long do I have to return my chairs?</p>
+        <!-- <i class="icon"></i> -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="1con"
+          style="fill: #087f5b; transform: ; msfilter: "
+        >
+          <path
+            d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
+          ></path>
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nihil placeat, alias accusamus adipisci molestiae, laboriosam ipsam
+            consequatur doloribus esse explicabo, corrupti voluptatem rem
+            incidunt vel voluptate. Aliquam, natus veniam?
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Neque temporibus officiis dolorum non vel doloremque.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Quod odio magni molestias nemo ullam. Est minima fugiat.</li>
+          </ul>
+        </div>
+      </div>
+      <!-- </div>
+    <div class="acccordion"> -->
+      <div class="item">
+        <p class="number">03</p>
+        <p class="text">Do you ship to countries outside Africa?</p>
+        <!-- <i class="icon"></i> -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="1con"
+          style="fill: #087f5b; transform: ; msfilter: "
+        >
+          <path
+            d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"
+          ></path>
+        </svg>
+        <div class="hidden-box">
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
+            nihil placeat, alias accusamus adipisci molestiae, laboriosam ipsam
+            consequatur doloribus esse explicabo, corrupti voluptatem rem
+            incidunt vel voluptate. Aliquam, natus veniam?
+          </p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Neque temporibus officiis dolorum non vel doloremque.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Quod odio magni molestias nemo ullam. Est minima fugiat.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
